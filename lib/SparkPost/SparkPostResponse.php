@@ -106,17 +106,17 @@ class SparkPostResponse implements ResponseInterface
         return $this->response->withBody($body);
     }
 
-    public function getStatusCode()
+    public function getStatusCode(): int
     {
         return $this->response->getStatusCode();
     }
 
-    public function withStatus($code, $reasonPhrase = '')
+    public function withStatus($code, $reasonPhrase = ''): ResponseInterface
     {
         return $this->response->withStatus($code, $reasonPhrase);
     }
 
-    public function getReasonPhrase()
+    public function getReasonPhrase(): string
     {
         return $this->response->getReasonPhrase();
     }
